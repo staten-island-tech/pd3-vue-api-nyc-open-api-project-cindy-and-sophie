@@ -1,4 +1,6 @@
 <template>
+  <h1>Good Morning</h1>
+  <button></button>
   <div class="container">
     <CrimeCard
       v-for="(crimes, index) in crime"
