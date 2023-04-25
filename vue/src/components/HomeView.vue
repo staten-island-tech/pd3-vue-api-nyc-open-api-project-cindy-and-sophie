@@ -4,9 +4,9 @@
   <button>Race</button>
   <div class="container">
     <CrimeCard
-      v-for="(crimes, index) in crime"
+      v-for="crime in crime"
       :key="crime.arrest_key"
-      :arrest_date="index + 1"
+      :arrest_date="crime.arrest_date"
       :crime="crimes"
     />
   </div>
@@ -15,6 +15,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import CrimeCard from '../src/components/CrimeCard.vue'
+
 const crime = ref('')
 async function getCrime() {
   let res = await fetch('https://data.cityofnewyork.us/resource/uip8-fykc.json')
