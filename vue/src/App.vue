@@ -1,6 +1,7 @@
 <template>
   <h1>Good Morning</h1>
-  <button></button>
+  <button>Gender</button>
+  <button>Race</button>
   <div class="container">
     <CrimeCard
       v-for="(crimes, index) in crime"
