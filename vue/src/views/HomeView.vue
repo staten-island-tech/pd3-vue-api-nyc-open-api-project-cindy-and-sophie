@@ -1,7 +1,7 @@
 <template>
-  <h1>Good Morning</h1>
-  <button>Gender</button>
-  <button>Race</button>
+  <h1>Crime Data</h1>
+  <button>Gender: Bar Chart</button>
+  <button>Race: Pie Chart</button>
   <div class="container">
     <CrimeCard
       v-for="crime in crime"
