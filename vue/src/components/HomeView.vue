@@ -10,7 +10,6 @@
       :crime="crimes"
     />
   </div>
-  >
 </template>
 
 <script setup>
