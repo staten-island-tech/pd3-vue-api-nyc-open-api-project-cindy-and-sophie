@@ -3,29 +3,38 @@
   <button>Gender: Bar Chart</button>
   <button>Race: Pie Chart</button>
   <div class="container">
-    <CrimeCard
+    <Card
       v-for="crime in crime"
-      :key="crime.arrest_key"
+      :arrest_key="crime.arrest_key"
       :arrest_date="crime.arrest_date"
-      :crime="crimes"
+      :ofns_desc="crime.ofns_desc"
     />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import CrimeCard from '../src/components/CrimeCard.vue'
+import Card from '../src/components/CrimeCard.vue'
 
 const crime = ref('')
 async function getCrime() {
   let res = await fetch('https://data.cityofnewyork.us/resource/uip8-fykc.json')
   let data = await res.json()
-  crime.value = data.crime
+  crime.value = data
 }
 onMounted(() => {
   getCrime()
 })
-console.log(crime)
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.container {
+  wdith: 80vw;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+</style>
