@@ -1,7 +1,6 @@
 <template>
   <div>
     <nav>
-      <RouterLink to="/HomeView">Home</RouterLink>
       <RouterLink to="/BarChart">Bar Chart</RouterLink>
       <RouterLink to="/PieChart">Pie Chart</RouterLink>
     </nav>

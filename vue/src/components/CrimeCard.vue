@@ -1,9 +1,9 @@
 <template>
   <div class="card">
-    <h2>{{ arrest_key }}</h2>
-    <h3>{{ arrest_date }}</h3>
-    <h4>Offense Descriptions: {{ ofns_desc }}</h4>
-    <button class="crime">Learn More</button>
+    <h2 class="words">{{ arrest_key }}</h2>
+    <h3 class="words">{{ arrest_date }}</h3>
+    <h4 class="words">Offense Descriptions: {{ ofns_desc }}</h4>
+    <button class="crimebtn">Learn More</button>
   </div>
 </template>
 
@@ -20,7 +20,18 @@ export default {
 
 <style scoped>
 .card {
-  color: blue;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 20vw;
+  color: rgb(0, 0, 0);
+  background-color: rgb(144, 173, 193);
+  align-content: center;
+}
+.words {
+  margin-left: 10px;
+}
+.crimebtn {
 }
 </style>
