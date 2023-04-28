@@ -1,10 +1,22 @@
+<!-- <template>
+  <div class="navbar">
+    <NavTab />
+  </div>
+</template>
+
+<script setup>
+import NavTab from './components/NavTab.vue'
+</script>
+
+<style scoped>
+h1 {
+  font-size: 20px;
+}
+</style> -->
 <template>
   <h1>Crime Data</h1>
-  <nav>
-    <button class="charts"><RouterLink to="/BarChart">Age Group: Bar Chart</RouterLink></button>
-    <button class="charts"><RouterLink to="/BarChart">Race: Pie Chart</RouterLink></button>
-  </nav>
-
+  <button>Gender: Bar Chart</button>
+  <button>Race: Pie Chart</button>
   <div class="container">
     <Card
       v-for="crime in crime"
@@ -40,15 +52,5 @@ onMounted(() => {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-}
-.charts {
-  border-radius: 10px;
-  padding: 0.5rem 0.5rem;
-  margin-right: 20px;
-  margin-left: 60px;
-}
-h1 {
-  text-decoration: underline;
-  margin-left: 60px;
 }
 </style>
