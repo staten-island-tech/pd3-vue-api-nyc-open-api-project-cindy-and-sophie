@@ -26,12 +26,17 @@ export default {
   margin-bottom: 20px;
   width: 20vw;
   color: rgb(0, 0, 0);
-  background-color: rgb(144, 173, 193);
+  background-color: rgba(149, 175, 221, 0.863);
+  border-color: blue;
   align-content: center;
+  border-radius: 10px;
 }
 .words {
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .crimebtn {
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
 }
 </style>

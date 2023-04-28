@@ -17,7 +17,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
 import Card from '../src/components/CrimeCard.vue'
 
 const crime = ref('')
