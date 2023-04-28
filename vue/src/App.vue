@@ -18,6 +18,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import Card from '../src/components/CrimeCard.vue'
+import { RouterLink, RouterView } from 'vue-router'
 
 const crime = ref('')
 async function getCrime() {
