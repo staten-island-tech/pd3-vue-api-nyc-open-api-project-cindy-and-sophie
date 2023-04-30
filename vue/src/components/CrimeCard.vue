@@ -32,6 +32,4 @@ export default {
 .words {
   margin-left: 10px;
 }
-.crimebtn {
-}
 </style>
