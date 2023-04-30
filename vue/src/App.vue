@@ -30,7 +30,7 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  wdith: 80vw;
+  width: 80vw;
   margin: 30px auto;
   display: flex;
   flex-wrap: wrap;
