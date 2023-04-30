@@ -1,8 +1,8 @@
 <template>
-  <h1>Crime Data</h1>
+  <div class="container">
+    <h1>Crime Data</h1>
   <button>Gender: Bar Chart</button>
   <button>Race: Pie Chart</button>
-  <div class="container">
     <Card
       v-for="crime in crime"
       :arrest_key="crime.arrest_key"
