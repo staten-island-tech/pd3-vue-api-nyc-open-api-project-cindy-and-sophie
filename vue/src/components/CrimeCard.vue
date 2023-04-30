@@ -32,4 +32,4 @@ export default {
 .words {
   margin-left: 10px;
 }
-
+</style>

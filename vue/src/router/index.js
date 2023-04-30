@@ -10,6 +10,11 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/Data',
+      name: 'Data',
+      component: () => import('../views/Data.vue')
+    },
+    {
       path: '/BarChart',
       name: 'BarChart',
       component: () => import('../views/BarChart.vue')

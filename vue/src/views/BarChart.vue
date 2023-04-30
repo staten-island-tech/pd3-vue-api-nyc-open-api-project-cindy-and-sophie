@@ -1,30 +1,50 @@
 <template>
   <div class="chart">
-    <RouterLink to="/">Main</RouterLink>
-    <Doughnut v-if="loaded" :data="chartData" :options="chartOptions" />
+    <Bar v-if="loaded" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
 <script>
-import { BarChart } from 'vue-chartjs'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-ChartJS.register(ArcElement, Tooltip, Legend)
+import { Bar } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   name: 'BarChart',
   components: {
-    BarChart
+    Bar
+  },
+  props: {
+    chartOptions: {
+      type: Object,
+      required: true,
+      default: () => ({
+        responsive: true
+      })
+    },
+    chartData: {
+      type: Object,
+      required: true
+    }
   },
   data() {
     return {
       loaded: false,
       chartData: {
-        labels: ['<18', '18-24', '25-44', '45-64', '65"'],
+        labels: ['<18', '18-24', '25-44', '45-64', '65'],
         datasets: [{ data: [] }]
       },
       chartOptions: {
         responsive: true,
         maintainAspectRatio: true,
-        backgroundColor: ['#ADD8E6']
+        backgroundColor: ['#caf0f8', '#ADD8f9', '#90e0ef', '#00b4d8', '#0077b6']
       }
     }
   },
@@ -32,7 +52,7 @@ export default {
     try {
       const res = await fetch('https://data.cityofnewyork.us/resource/uip8-fykc.json')
       let data = await res.json()
-      const lessEighteen = datasets.filter((crime) => crime.age_group === '<18')
+      const lessEighteen = data.filter((crime) => crime.age_group === '<18')
       this.chartData.datasets[0].data.push(lessEighteen.length)
       const oneTwo = data.filter((crime) => crime.age_group === '18-24')
       this.chartData.datasets[0].data.push(oneTwo.length)
