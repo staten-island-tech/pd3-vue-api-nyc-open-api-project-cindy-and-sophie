@@ -52,7 +52,7 @@ export default {
     try {
       const res = await fetch('https://data.cityofnewyork.us/resource/uip8-fykc.json')
       let data = await res.json()
-      const black = datasets.filter((crime) => crime.race === 'Black')
+      const black = data.filter((crime) => crime.race === 'Black')
       this.chartData.datasets[0].data.push(black.length)
       const whispanic = data.filter((crime) => crime.race === 'White Hispanic')
       this.chartData.datasets[0].data.push(whispanic.length)
