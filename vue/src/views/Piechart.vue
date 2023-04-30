@@ -89,7 +89,7 @@ h2:hover {
   color: #7a6e63;
   font-size: 2.5rem;
 }
-.chart2 {
+.chart {
   margin-left: 80%;
   flex-wrap: wrap;
   justify-content: center;
