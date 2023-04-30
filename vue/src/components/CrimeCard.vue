@@ -2,8 +2,9 @@
   <div class="card">
     <h2 class="words">{{ arrest_key }}</h2>
     <h3 class="words">{{ arrest_date }}</h3>
+    <h3 class="words">{{ perp_sex }}</h3>
+    <h3 class="words">{{ perp_race }}</h3>
     <h4 class="words">Offense Descriptions: {{ ofns_desc }}</h4>
-    <button class="crimebtn">Learn More</button>
   </div>
 </template>
 
@@ -13,6 +14,8 @@ export default {
   props: {
     arrest_key: Number,
     arrest_date: Number,
+    perp_sex: String,
+    perp_race: String,
     ofns_desc: String
   }
 }
