@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: '/PieChart',
       name: 'PieChart',
-      component: () => import('../views/PieChart.vue')
+      component: () => import('../views/Piechart.vue')
     }
   ]
 })
