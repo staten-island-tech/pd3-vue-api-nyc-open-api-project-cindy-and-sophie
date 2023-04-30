@@ -7,6 +7,8 @@
       :arrest_key="crime.arrest_key"
       :arrest_date="crime.arrest_date"
       :ofns_desc="crime.ofns_desc"
+      :perp_sex = "crime.perp_sex"
+      :perp_race = "crime.perp_race"
     />
   </div>
 </template>
