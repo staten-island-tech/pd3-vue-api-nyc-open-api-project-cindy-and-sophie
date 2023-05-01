@@ -14,7 +14,6 @@ body {
   margin: 0;
 }
 nav {
-  font-family: 'Noto Sans', sans-serif;
   letter-spacing: 0.1rem;
   display: flex;
   flex-direction: row;
@@ -26,9 +25,8 @@ nav {
 }
 nav a {
   font-size: 1.2rem;
-  color: #8e4d4d;
+  color: #121111;
   display: flex;
-  justify-content: center;
   padding: 0 1rem;
   margin: 0.5rem;
   width: fit-content;
