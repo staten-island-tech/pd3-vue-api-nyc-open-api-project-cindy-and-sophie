@@ -9,8 +9,6 @@
   </div>
 </template>
 
-<script></script>
-
 <style scoped>
 body {
   margin: 0;
@@ -36,18 +34,5 @@ nav a {
   width: fit-content;
   white-space: nowrap;
   text-decoration: none;
-}
-nav a:first-of-type {
-  border: none;
-}
-nav a.router-link-active {
-  opacity: 60%;
-}
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-nav a:hover {
-  opacity: 60%;
-  transition: all 1s ease;
 }
 </style>
