@@ -39,7 +39,7 @@ export default {
       loaded: false,
       chartData: {
         labels: ['<18', '18-24', '25-44', '45-64', '65'],
-        datasets: [{ data: [] }]
+        datasets: [{ label: 'Crime Ages', data: [] }]
       },
       chartOptions: {
         responsive: true,

@@ -9,14 +9,11 @@
   </div>
 </template>
 
-<script></script>
-
 <style scoped>
 body {
   margin: 0;
 }
 nav {
-  font-family: 'Noto Sans', sans-serif;
   letter-spacing: 0.1rem;
   display: flex;
   flex-direction: row;
@@ -28,26 +25,12 @@ nav {
 }
 nav a {
   font-size: 1.2rem;
-  color: #8e4d4d;
+  color: #121111;
   display: flex;
-  justify-content: center;
   padding: 0 1rem;
   margin: 0.5rem;
   width: fit-content;
   white-space: nowrap;
   text-decoration: none;
-}
-nav a:first-of-type {
-  border: none;
-}
-nav a.router-link-active {
-  opacity: 60%;
-}
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-nav a:hover {
-  opacity: 60%;
-  transition: all 1s ease;
 }
 </style>
